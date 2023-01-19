@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static io.restassured.RestAssured.baseURI;
@@ -85,8 +86,17 @@ public class UserWith_JsonPath {
         System.out.println(secondName);
         System.out.println(jobs);
 
+
+        List<String> joblist = new ArrayList<>();
+        joblist.add("Junior Developer1");
+        joblist.add("Junior Developer1");
+        joblist.add("Junior Developer");
+
+        System.out.println(joblist);
+
+
         Assert.assertEquals(secondName,"isa akyuz");
-        Assert.assertEquals(jobs,"Junior Developer1, Junior Developer1, Junior Developer");
+       Assert.assertEquals(jobs,joblist);
 
 
     }
