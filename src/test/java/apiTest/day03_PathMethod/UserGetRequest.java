@@ -1,4 +1,4 @@
-package apiTest.day03;
+package apiTest.day03_PathMethod;
 
 
 import static io.restassured.RestAssured.*;
@@ -52,8 +52,14 @@ public class UserGetRequest {
 
         Assert.assertEquals(response.statusCode(),200);
         Assert.assertEquals(response.contentType(),"application/json; charset=UTF-8");
+
+        //verify the header
         Assert.assertEquals(response.header("Content-Length"),"636");
         Assert.assertEquals(response.header("Content-Type"),"application/json; charset=UTF-8");
+
+        Assert.assertTrue(response.headers().hasHeaderWithName("Date"));
+
+        //verify the body
         Assert.assertTrue(response.body().asString().contains("Thomas Eduson"));
 
 

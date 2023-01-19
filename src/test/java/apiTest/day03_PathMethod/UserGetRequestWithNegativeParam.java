@@ -1,4 +1,4 @@
-package apiTest.day03;
+package apiTest.day03_PathMethod;
 
 
 import static io.restassured.RestAssured.*;
@@ -82,7 +82,7 @@ public class UserGetRequestWithNegativeParam {
 
     }
 
-    //using MAp
+    //using Map
     @Test
     public void requestWithMap(){
 
