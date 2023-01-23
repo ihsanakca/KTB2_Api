@@ -136,7 +136,11 @@ public class UserWith_JsonPath {
 //        System.out.println(skillsPath);
 
         //assertion yapabilmek icin path metodu ile liste olusturabiliriz
-        List<String> skills2=response.path("skills[0]");
+       // List<String> skills2=response.path("skills[0]");
+
+        //veya jsonPath den getLIst metodu ile path adresini vererek liste olusturabiliriz
+        List<String> skills2=jsonPath.getList("skills[0]");
+        System.out.println("skills2 = " + skills2);
         List<String> skillList = new ArrayList<>();
         skillList.add("PHP");
         skillList.add("Java");
