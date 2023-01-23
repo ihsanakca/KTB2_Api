@@ -128,22 +128,29 @@ public class UserWith_JsonPath {
         JsonPath jsonPath=response.jsonPath();
 
         //jsonpath metodu liste olarak stringe assign etmeye izin veriyor.
-        String skills= jsonPath.getString("skills");
+        String skills= jsonPath.getString("skills[0]");
+        System.out.println("skills = " + skills);
 
-        //path metodu liste olarak Stringe assign etmeye izin vermiyor.
+        //path metodu liste olarak String e assign etmeye izin vermiyor.
 //        String skillsPath= response.path("skills");
 //        System.out.println(skillsPath);
 
+        //assertion yapabilmek icin path metodu ile liste olusturabiliriz
+        List<String> skills2=response.path("skills[0]");
+        List<String> skillList = new ArrayList<>();
+        skillList.add("PHP");
+        skillList.add("Java");
+        skillList.add("Selenium");
+        skillList.add("Cypress");
+        skillList.add("SQL");
+
+        System.out.println(skillList);
+        Assert.assertEquals(skills2,skillList);
+
         String firstSkill= jsonPath.getString("skills[0][0]");
-
-        System.out.println(skills);
-
         System.out.println(firstSkill);
 
+        Assert.assertEquals(firstSkill,"PHP");
 
     }
-
-
-
-
 }
