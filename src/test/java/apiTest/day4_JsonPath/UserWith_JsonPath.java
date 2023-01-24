@@ -10,8 +10,10 @@ import org.testng.annotations.BeforeClass;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.baseURI;
+import static org.testng.Assert.assertEquals;
 
 public class UserWith_JsonPath {
 
@@ -127,7 +129,7 @@ public class UserWith_JsonPath {
 
         JsonPath jsonPath=response.jsonPath();
 
-        //jsonpath metodu liste olarak stringe assign etmeye izin veriyor.
+       //jsonpath metodu liste olarak stringe assign etmeye izin veriyor.
         String skills= jsonPath.getString("skills[0]");
         System.out.println("skills = " + skills);
 
@@ -141,6 +143,7 @@ public class UserWith_JsonPath {
         //veya jsonPath den getLIst metodu ile path adresini vererek liste olusturabiliriz
         List<String> skills2=jsonPath.getList("skills[0]");
         System.out.println("skills2 = " + skills2);
+
         List<String> skillList = new ArrayList<>();
         skillList.add("PHP");
         skillList.add("Java");
@@ -157,4 +160,8 @@ public class UserWith_JsonPath {
         Assert.assertEquals(firstSkill,"PHP");
 
     }
+
+
+
+
 }
