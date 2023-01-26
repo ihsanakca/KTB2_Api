@@ -1,4 +1,4 @@
-package apiTest.day4_JsonPath;
+package apiTest.day04_JsonPath;
 import static io.restassured.RestAssured.*;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -6,11 +6,9 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import static io.restassured.RestAssured.baseURI;
 import static org.testng.Assert.assertEquals;

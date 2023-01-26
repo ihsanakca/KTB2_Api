@@ -1,11 +1,8 @@
-package apiTest.day5_HamcrestMatcher;
+package apiTest.day05_HamcrestMatcher;
 
 import io.restassured.http.ContentType;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;

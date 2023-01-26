@@ -1,4 +1,4 @@
-package apiTest.day5_HamcrestMatcher;
+package apiTest.day05_HamcrestMatcher;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
