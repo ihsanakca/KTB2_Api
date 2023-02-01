@@ -40,10 +40,5 @@ public class PutExperience {
                 .when().log().all()
                 .put("/experience/updateput").prettyPeek();
 
-
-
-
     }
-
-
 }

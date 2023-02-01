@@ -28,9 +28,5 @@ public class DeleteExperince {
                 .when().log().all()
                 .delete("/experience/delete/{id}").prettyPeek();
 
-
-
-
     }
-
 }
