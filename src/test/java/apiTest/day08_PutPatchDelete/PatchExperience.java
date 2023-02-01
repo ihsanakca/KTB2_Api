@@ -25,8 +25,8 @@ public class PatchExperience {
     public void patchExperience(){
         String body="{\n" +
                 "  \"job\": \" ttttDeveloper\",\n" +
-                //  "  \"company\": \"Kraft Techex\",\n" +
-                //  "  \"location\": \"USA\",\n" +
+             //  "  \"company\": \"Kraft Techex\",\n" +
+              //  "  \"location\": \"USA\",\n" +
                 "  \"fromdate\": \"2020-12-12\",\n" +
                 "  \"todate\": \"2022-11-11\",\n" +
                 "  \"current\": \"false\",\n" +
